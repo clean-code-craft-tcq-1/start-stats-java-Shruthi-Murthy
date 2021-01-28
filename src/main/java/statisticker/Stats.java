@@ -1,5 +1,6 @@
 package statisticker;
 
+
 public class Stats {
 
 		public float average;

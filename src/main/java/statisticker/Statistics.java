@@ -1,5 +1,6 @@
 package statisticker;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Statistics 
@@ -13,6 +14,9 @@ public class Statistics
 			stats.min(Float.NaN);
 			stats.max(Float.NaN);
 		}
+		Collections.sort(numbers);
+		stats.min(numbers.get(0));
+		stats.max(numbers.get(numbers.size()-1));
 		return stats;
     }
 }
