@@ -1,8 +1,6 @@
 package statisticker;
 
 import static org.junit.Assert.*;
-import jdk.nashorn.internal.AssertsEnabled;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
@@ -44,8 +42,8 @@ public class StatisticsTest
         StatsChecker checker = new StatsChecker(maxThreshold, alerters);
 
         Float[] numbers = {11.5f, 6.9f, 7.5f, 6.6f};
-        List<___> numberList = Arrays.asList(numbers);
-        checker.checkAndAlert(numbers);
+        List<Float> numberList = Arrays.asList(numbers);
+        checker.checkAndAlert(numberList);
         
         assertTrue(emailAlerter.emailSent);
         assertTrue(ledAlerter.ledGlows);
