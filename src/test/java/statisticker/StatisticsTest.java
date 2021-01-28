@@ -31,7 +31,7 @@ public class StatisticsTest
 
         Statistics.Stats s = Statistics.getStatistics(emptyList);
         asssetTrue(Float.isNAN(s.average()));
-        asssetTrue(Float.isNAN(Float.isNAN(s.min()));
+        asssetTrue(Float.isNAN((s.min()));
         asssetTrue(Float.isNAN(s.max()));
     }
     @Test
