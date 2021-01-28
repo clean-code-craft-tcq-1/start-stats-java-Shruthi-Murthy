@@ -8,7 +8,7 @@ public class Statistics
 
 	public static Stats getStatistics(final List<Float> numbers) {
 		Stats stats = new Stats();
-		if(numbers.isEmpty()||numbers.size()==0)
+		if(numbers.size()==0)
 		{
 			stats.setAverage(Float.NaN);
 			stats.setMin(Float.NaN);
