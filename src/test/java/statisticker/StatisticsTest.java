@@ -7,30 +7,31 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+
 public class StatisticsTest 
 {
-    @Test
+	@Test
     public void reportsAverageMinMaxx()
     {
         Float[] numbers = {1.5f, 8.9f, 3.2f, 4.5f};
         List<Float> numberList = Arrays.asList(numbers);
 
-        Statistics.Stats s = Statistics.getStatistics(numberList);
+        Stats s = Statistics.getStatistics(numberList);
 
         float epsilon = 0.001f;
-        //assertEquals(4.525f,s.getAverage(), epsilon);
-        assertEquals(1.5f,s.getMin(), epsilon);
-        assertEquals(8.9f,s.getMax(), epsilon);
+        //assertEquals(s.average(), 4.525f, epsilon);
+        assertEquals(s.getMin(),1.5f, epsilon);
+        assertEquals(s.getMax(),8.9f, epsilon);
     }
     @Test
     public void reportsNaNForEmptyInput()
     {
         List<Float> emptyList = new ArrayList<>();
 
-        Statistics.Stats s = Statistics.getStatistics(emptyList);
-        asssetTrue(Float.isNAN(s.getAverage()));
-        asssetTrue(Float.isNAN((s.getMin()));
-        asssetTrue(Float.isNAN(s.getMax()));
+        Stats s = Statistics.getStatistics(emptyList);
+        //assertTrue(Float.isNaN(s.average()));
+        assertTrue(Float.isNaN(s.getMin()));
+        assertTrue(Float.isNaN(s.getMax()));
     }
     @Test
     public void reportsAlertsIfMaxIsMoreThanThreshold()
@@ -45,7 +46,7 @@ public class StatisticsTest
         List<Float> numberList = Arrays.asList(numbers);
         checker.checkAndAlert(numberList);
         
-//         assertTrue(emailAlerter.emailSent);
-//         assertTrue(ledAlerter.ledGlows);
+//        assertTrue(emailAlerter.emailSent);
+//        assertTrue(ledAlerter.ledGlows);
     }
 }
