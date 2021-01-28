@@ -19,7 +19,7 @@ public class StatisticsTest
         Stats s = Statistics.getStatistics(numberList);
 
         float epsilon = 0.001f;
-        //assertEquals(s.average(), 4.525f, epsilon);
+        assertEquals(s.getAverage(), 4.525f, epsilon);
         assertEquals(s.getMin(),1.5f, epsilon);
         assertEquals(s.getMax(),8.9f, epsilon);
     }
