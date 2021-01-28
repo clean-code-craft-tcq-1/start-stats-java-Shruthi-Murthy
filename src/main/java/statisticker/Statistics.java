@@ -8,15 +8,15 @@ public class Statistics
 
 	public static Stats getStatistics(final List<Float> numbers) {
 		Stats stats = new Stats();
-		if(numbers.isEmpty())
+		if(numbers.isEmpty()||numbers.size()==0)
 		{
-			stats.average(Float.NaN);
-			stats.min(Float.NaN);
-			stats.max(Float.NaN);
+			stats.setAverage(Float.NaN);
+			stats.setMin(Float.NaN);
+			stats.setMax(Float.NaN);
 		}
 		Collections.sort(numbers);
-		stats.min(numbers.get(0));
-		stats.max(numbers.get(numbers.size()-1));
+		stats.setMin(numbers.get(0));
+		stats.setMax(numbers.get(numbers.size()-1));
 		return stats;
     }
 }

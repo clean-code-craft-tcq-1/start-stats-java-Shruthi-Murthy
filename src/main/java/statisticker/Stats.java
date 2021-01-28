@@ -6,23 +6,23 @@ public class Stats {
 		public float average;
 		public float min;
 		public float max;
-		public float average(float average) {
-			return average;
+		
+		public float getAverage() {
+			return this.average;
 		}
-		public float min(float min) {
-			return min;
+		public float getMin() {
+			return this.min;
 		}
-		public float max(float max) {
-			return max;
+		public float getMax() {
+			return this.max;
 		}
-		public float average() {
-			return 0;
+		public void setAverage(float average) {
+			this.average = average;
 		}
-		public float min() {
-			return 0;
+		public void setMin(float min) {
+			this.min = min;
 		}
-		public float max() {
-			return 0;
+		public void setMax(float max) {
+			this.max = max;
 		}
-
 	}
